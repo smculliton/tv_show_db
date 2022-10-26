@@ -1,0 +1,9 @@
+<h1>Your Shows:</h1>
+
+<% @shows.each do |show| %>
+  <h2><%= show.name %></h2>
+  <p><%= show.genre1 %><%= " - #{show.genre2} " unless show.genre2.nil? %><%= " - #{show.genre3} " unless show.genre3.nil? %></p>
+  <p><%= "Average Rating: #{show.rating}" %>
+<% end %>
+
+<%= button_to 'Add New Show', 'shows/new', method: :get %>

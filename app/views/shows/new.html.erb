@@ -1,0 +1,7 @@
+<h1>New Show</h1>
+
+<%= form_with url: '/shows', local: true do |f| %>
+  <%= f.label :show_id, 'Show ID' %>
+  <%= f.text_field :show_id %>
+  <%= f.submit 'Add Show' %>
+<% end %>
