@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/shows', to: 'shows#index' 
   get '/shows/new', to: 'shows#new'
   post '/shows', to: 'shows#create'
+  delete '/shows/:id', to: 'shows#destroy'
 
   get '/search', to: 'search#index'
 end

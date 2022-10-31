@@ -12,4 +12,11 @@ class ShowsController < ApplicationController
 
     redirect_to '/shows'
   end
+
+  def destroy
+    show = Show.find(params[:id])
+    show.destroy
+
+    redirect_to '/shows'
+  end
 end

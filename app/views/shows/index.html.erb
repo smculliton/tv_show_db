@@ -3,7 +3,18 @@
 <% @shows.each do |show| %>
   <h2><%= show.name %></h2>
   <p><%= show.genre1 %><%= " - #{show.genre2} " unless show.genre2.nil? %><%= " - #{show.genre3} " unless show.genre3.nil? %></p>
-  <p><%= "Average Rating: #{show.rating}" %>
+  <p><%= "Average Rating: #{show.rating}" %></p>
+  <%= button_to "Delete #{show.name}", "/shows/#{show.id}", method: :delete %>
 <% end %>
+<br>
+------------------------------------------------------------------------
+<br>
+<%# <%= button_to 'Add New Show', 'shows/new', method: :get %>
 
-<%= button_to 'Add New Show', 'shows/new', method: :get %>
+
+<h2>Search Shows</h2>
+<%= form_with url: '/search', method: :get, local: true do |f| %>
+  <%= f.label :search %>
+  <%= f.text_field :search %>
+  <%= f.submit 'Search' %>
+<% end %>
