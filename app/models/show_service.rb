@@ -12,4 +12,8 @@ class ShowService
     response = Faraday.get(url)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def search(search_param)
+    get_url("https://api.tvmaze.com/search/shows?q=#{search_param}")[0..4]
+  end
 end

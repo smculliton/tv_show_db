@@ -246,6 +246,8 @@
           1,
           1,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -255,42 +257,17 @@
           null
         ]
       },
-      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/controllers/shows_controller.rb": {
+      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/controllers/search_controller.rb": {
         "lines": [
           1,
           1,
           2,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
           null,
           null
         ]
       },
       "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/models/show.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/models/application_record.rb": {
-        "lines": [
-          1,
           1,
           null
         ]
@@ -308,13 +285,51 @@
           null,
           null,
           1,
+          2,
+          2,
+          null,
+          null,
           1,
           1,
           null,
           null
         ]
+      },
+      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/controllers/shows_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/models/show.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sean/turing/m2/practice/api_practice/tv_show_db/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1666756216
+    "timestamp": 1667237748
   }
 }
