@@ -1,24 +1,9 @@
-# README
+# Guidelines
+- Branch before doing any updates, push code up, merge it yourself. This allows me to add comments
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# To-do
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Fill out this README
+2. Fill out the "About" section of the project
+3. More tests for the service class
+4. Add login / register functionality, require users to login before searching
