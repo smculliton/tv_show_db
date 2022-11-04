@@ -14,8 +14,6 @@ RSpec.describe 'the search index' do
     fill_in 'Search', with: 'Lost'
     click_button 'Search'
 
-    save_and_open_page
-
     expect(current_path).to eq('/search')
     expect(page).to have_content('1: Lost')
   end

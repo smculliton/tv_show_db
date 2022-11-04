@@ -8,7 +8,6 @@ RSpec.describe 'the show index' do
 
   it 'lists shows' do
     visit '/shows'
-    save_and_open_page
     expect(page).to have_content(@lost.name)
     expect(page).to have_content(@xfiles.name)
     expect(page).to have_content(@xfiles.genre1)
