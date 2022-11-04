@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
   get '/shows', to: 'shows#index' 
   get '/shows/new', to: 'shows#new'
   post '/shows', to: 'shows#create'

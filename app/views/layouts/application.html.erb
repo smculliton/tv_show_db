@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= "Logged in as: #{current_user.username}" %>
+      <%= button_to 'Logout', '/logout', method: :delete %>
+    <% end %>
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
