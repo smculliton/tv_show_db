@@ -5,10 +5,11 @@ RSpec.describe 'the Logout page' do
     @user = User.create!(username: 'steviewonder', password: 'iluvpiano666')
 
     visit '/login'
-
-    fill_in 'Username', with: 'steviewonder'
-    fill_in 'Password', with: 'iluvpiano666'
-    click_button 'Login'
+    within '#login' do 
+      fill_in 'Username', with: 'steviewonder'
+      fill_in 'Password', with: 'iluvpiano666'
+      click_button 'Login'
+    end
   end
 
   it 'logs a user out' do 
