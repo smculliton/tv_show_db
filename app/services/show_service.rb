@@ -1,7 +1,15 @@
 class ShowService
   def self.show_info(id)
     info = new_show(id)
-    { name: info[:name], genre1: info[:genres][0], genre2: info[:genres][1], genre3: info[:genres][2], rating: info[:rating][:average] }
+    { name: info[:name], 
+      genre1: info[:genres][0], 
+      genre2: info[:genres][1], 
+      genre3: info[:genres][2], 
+      rating: info[:rating][:average],
+      premiered: info[:premiered],
+      ended: info[:ended],
+      summary: info[:summary]
+    }
   end
 
   def self.new_show(id)
