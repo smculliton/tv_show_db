@@ -7,7 +7,7 @@ class ShowsController < ApplicationController
   end
 
   def create
-    Show.create!(ShowService.film_info(params[:show_id]))
+    Show.create!(ShowService.show_info(params[:show_id]))
 
     redirect_to '/shows'
   end

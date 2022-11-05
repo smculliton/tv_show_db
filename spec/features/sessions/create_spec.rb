@@ -7,10 +7,11 @@ RSpec.describe 'the Login page' do
     visit '/login'
   end
   it 'logs into account' do 
-    fill_in 'Username', with: 'steviewonder'
-    fill_in 'Password', with: 'iluvpiano666'
-    click_button 'Login'
-
+    within '#login' do 
+      fill_in 'Username', with: 'steviewonder'
+      fill_in 'Password', with: 'iluvpiano666'
+      click_button 'Login'
+    end
     expect(current_path).to eq("/users/#{@user.id}")
     expect(page).to have_content("Logged in as: #{@user.username}")
   end
