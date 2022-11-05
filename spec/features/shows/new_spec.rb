@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe 'the new show page' do 
-  it 'links from the index' do
-    visit '/shows'
+RSpec.describe 'the new tv show page' do 
+  # it 'links from the index' do
+  #   visit '/shows'
 
-    click_button 'Add New Show'
+  #   click_button 'Add New Show'
 
-    expect(current_path).to eq('/shows/new')
-  end
+  #   expect(current_path).to eq('/shows/new')
+  # end
 
   it 'adds a show and redirects to index' do 
     visit '/shows/new'
