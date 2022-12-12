@@ -2,6 +2,9 @@ class Show < ApplicationRecord
   validates_presence_of :name #, :genre1
   # validates :rating, numericality: true
 
+  has_many :user_shows
+  has_many :users, through: :user_shows
+
   def self.search(search_param)
     where("name ilike ?", "%#{search_param}%")
   end 

@@ -10,6 +10,11 @@ RSpec.describe User do
     it { should have_many(:followees).through(:followed_users) }
   end
 
+  describe 'relationships' do 
+    it { should have_many :user_shows }
+    it { should have_many(:shows).through(:user_shows) }
+  end
+
   it 'can have followers' do 
     users = create_list(:user, 10)
     first_user = users.first 

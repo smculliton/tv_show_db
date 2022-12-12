@@ -7,10 +7,12 @@
 
 <% if @results != nil %>
   <% @results.each_with_index do |result, i| %>
-    <p><strong><%= "#{i+1}: #{result.name} #{ result.premiered.strftime('%Y') if result.premiered }" %></strong></p>
+    <p><strong><%= "#{i+1}: #{result.name} (#{ result.premiered.strftime('%Y') if result.premiered })" %></strong></p>
     <p><%= result.summary %>
+    <% if session[:user_id] %>
+      <%= button_to "Favorite this Show", user_shows_path(session[:user_id]), params: { show_id: result.id } %>
+    <% end %>
   <% end %>
 
     <!-- Edit this button to add a show to the User's favorite shows -->
-    <%# <!-- <%=# button_to "Add #{i+1}: #{result.name}", '/shows', params: { show_id: result.id } %> --> %>
 <% end %>
