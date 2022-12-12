@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_05_190615) do
+
+ActiveRecord::Schema.define(version: 2022_12_12_032415) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followee_id"
+  end
 
   create_table "shows", force: :cascade do |t|
     t.string "name"
@@ -29,9 +36,18 @@ ActiveRecord::Schema.define(version: 2022_11_05_190615) do
     t.string "summary"
   end
 
+  create_table "user_shows", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "show_id"
+    t.index ["show_id"], name: "index_user_shows_on_show_id"
+    t.index ["user_id"], name: "index_user_shows_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
   end
 
+  add_foreign_key "user_shows", "shows"
+  add_foreign_key "user_shows", "users"
 end

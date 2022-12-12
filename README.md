@@ -17,3 +17,8 @@
 1. Add login / register functionality
 2. More tests for the service class
 3. Search the DB for shows before making the API call, after making the API call save the shows to the DB.
+
+# Questions
+
+1. How to block users from accessing other users' dashboards
+2. Certain functionality only exists if a user is logged in

@@ -1,1 +1,27 @@
-<h1><%= @user.username %></h1>
+<h2><%= @user.username %></h2>
+
+<hr>
+
+<section id='followees'>
+  <h3>People You Follow:</h3>
+  <ul>
+    <% @user.followees.each do |followee| %>
+      <li><%= followee.username %></li>
+    <% end %>
+  </ul>
+</section>
+
+<hr>
+
+<section id='suggested_follows'>
+  <h3>People You May Know:</h3>
+  <ul>
+    <% User.all.each do |followee| %>
+      <div id="user-<%= followee.id %>">
+        <li><%= "#{followee.username} | " %>
+        <%= link_to "Follow", "/users/#{@user.id}/follows/#{followee.id}", method: :post %></li>
+      </div>
+    <% end %>
+  </ul>
+</section>
+
