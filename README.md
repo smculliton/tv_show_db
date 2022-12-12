@@ -9,3 +9,8 @@
 4. More tests for the service class
 5. Search the DB for shows before making the API call, after making the API call save the shows to the DB. AFter step 5, when a user "deletes" a show off their index page, just remove the relationship, don't delete the Show.
 6. Add login / register functionality, require users to login before searching
+
+# Questions
+
+1. How to block users from accessing other users' dashboards
+2. Certain functionality only exists if a user is logged in
