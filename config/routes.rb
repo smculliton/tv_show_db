@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/', to: 'welcome#index'
 
-  resources :users
+  post '/users/:follower_id/follows/:followee_id', to: 'users/follows#create'
+
+  resources :users, only: [:new, :show]
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
