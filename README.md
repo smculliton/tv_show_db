@@ -10,6 +10,8 @@
 5. Create tests for search feature
 6. Create TV Show show page
 7. Add unfollow functionality to user dashboard
+8. Page where users can see the favorite shows of people they follow
+9. When a new user is created, they are automatically logged in
 
 
 # Finished Tasks
