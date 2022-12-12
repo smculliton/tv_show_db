@@ -1,6 +1,7 @@
 class ShowsController < ApplicationController
-  def index 
-    @shows = Show.all
+  def index
+    @user = User.find(session[:user_id])
+    # @shows = Show.all
   end
 
   def new

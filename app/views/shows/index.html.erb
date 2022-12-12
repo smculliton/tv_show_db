@@ -1,13 +1,14 @@
 <h1>Your Shows:</h1>
 
-<% @shows.each do |show| %>
+<% @user.shows.each do |show| %>
+  <hr>
   <h2><%= show.name %></h2>
   <p><%= show.genre1 %><%= " - #{show.genre2} " unless show.genre2.nil? %><%= " - #{show.genre3} " unless show.genre3.nil? %></p>
   <p><%= "Average Rating: #{show.rating}" %></p>
-  <%= button_to "Delete #{show.name}", "/shows/#{show.id}", method: :delete %>
+  <%= button_to "Delete #{show.name}", user_show_path(@user.id, show.id), method: :delete %>
 <% end %>
 <br>
-------------------------------------------------------------------------
+<hr>
 <br>
 <%# <%= button_to 'Add New Show', 'shows/new', method: :get %>
 

@@ -12,6 +12,7 @@
   <body>
     <% if current_user %>
       <%= "Logged in as: #{current_user.username}" %>
+      <%= button_to 'Dashboard', user_path(current_user), method: :get %>
       <%= button_to 'Logout', '/logout', method: :delete %>
     <% else %>
       <%= button_to 'Create New User', '/users/new', method: :get %>

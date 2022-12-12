@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/users/:follower_id/follows/:followee_id', to: 'users/follows#create'
 
   resources :users, only: [:new, :show, :create] do 
-    resources :shows, only: :create, controller: 'users/shows'
+    resources :shows, only: [:create, :destroy], controller: 'users/shows'
   end
 
   get '/login', to: 'sessions#new'
